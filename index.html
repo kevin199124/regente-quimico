@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regencia Química Externa - Servicios Profesionales en Costa Rica</title>
+  <meta name="description" content="Servicios profesionales de regencia química externa para industrias, cosméticos y agroindustria en Costa Rica. Cumplimiento normativo y asesoría técnica." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f3f6f9;
+      background-image: url('https://images.unsplash.com/photo-1581090700227-1e8e8f6c00c5?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      position: relative;
+      text-align: center;
+      padding: 60px 20px 40px;
+      color: #003865;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #d9e2ec;
+      background-image: url('data:image/svg+xml;utf8,<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 10 L30 110 M60 10 L60 110 M90 10 L90 110 M15 30 L105 30 M15 60 L105 60 M15 90 L105 90" stroke="%23003465" stroke-width="2" stroke-linecap="round"/><circle cx="60" cy="60" r="15" stroke="%23003465" stroke-width="2"/></svg>');
+      background-repeat: repeat;
+      background-size: 120px 120px;
+      overflow: hidden;
+      z-index: 0;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(217, 226, 236, 0.85);
+      z-index: -1;
+    }
+    header h1, header p {
+      margin: 0;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3em;
+    }
+    header p {
+      font-size: 1.3em;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #005792;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #0074b7;
+      padding-bottom: 8px;
+      font-weight: 700;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 1.1em;
+    }
+    ul li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 28px;
+    }
+    ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #0074b7;
+      font-weight: 700;
+      font-size: 1.2em;
+      line-height: 1;
+    }
+    .contacto {
+      background-color: #ffffff;
+      padding: 30px;
+      border: 1px solid #cde3f4;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .btn {
+      background-color: #0074b7;
+      color: white;
+      padding: 14px 28px;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+    .btn:hover,
+    .btn:focus {
+      background-color: #005792;
+      outline: none;
+    }
+    footer {
+      background-color: rgba(0, 87, 146, 0.9);
+      color: white;
+      text-align: center;
+      padding: 18px 10px;
+      font-size: 0.95em;
+      font-weight: 500;
+    }
+    /* Formulario */
+    .contact-form {
+      max-width: 1100px;
+      margin: 0 auto 40px auto;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.95);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+    .contact-form h2 {
+      color: #005792;
+      border-bottom: 3px solid #0074b7;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 1.8em;
+    }
+    .contact-form label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1em;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1.8px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.05em;
+      transition: border-color 0.3s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #0074b7;
+      outline: none;
+    }
+    .contact-form button {
+      background-color: #0074b7;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-size: 1.1em;
+      font-weight: 700;
+      width: 100%;
+    }
+    .contact-form button:hover,
+    .contact-form button:focus {
+      background-color: #005792;
+      outline: none;
+    }
+    /* Aviso privacidad */
+    .privacy-notice {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: -10px;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      .btn,
+      .contact-form button {
+        font-size: 1em;
+        padding: 12px 20px;
+      }
+    }
+    /* Botón fijo para contacto WhatsApp */
+    .sticky-contact {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0074b7;
+      color: white;
+      border-radius: 50px;
+      padding: 14px 24px;
+      box-shadow: 0 4px 15px rgba(0, 116, 183, 0.4);
+      font-weight: 700;
+      font-size: 1em;
+      text-decoration: none;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+    .sticky-contact:hover,
+    .sticky-contact:focus {
+      background-color: #005792;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Regencia Química Externa</h1>
+    <p>Servicios Profesionales en Costa Rica</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>¿Quién soy?</h2>
+      <p>
+        Ofrecemos servicios profesionales de regencia química externa para empresas que necesitan cumplir con la normativa sanitaria y técnica vigente. Nuestro compromiso es brindar un apoyo confiable, puntual y personalizado para que tu negocio opere con total seguridad y respaldo legal, facilitando trámites y asegurando el cumplimiento normativo sin complicaciones.
+      </p>
+    </section>
+
+    <section>
+      <h2>Servicios Profesionales</h2>
+      <ul>
+        <li>Regencia externa para industrias, cosméticos, productos de limpieza y agroindustria</li>
+        <li>Asesoría para trámites ante el Ministerio de Salud</li>
+        <li>Revisión y elaboración de Hojas de Seguridad (MSDS)</li>
+        <li>Asesoría en etiquetado y cumplimiento de normativa técnica</li>
+        <li>Capacitaciones en manejo seguro de productos químicos</li>
+        <li>Permisos sanitarios de funcionamiento</li>
+      </ul>
+    </section>
+
+    <section class="contacto">
+      <h2>Contacto</h2>
+      <p>¿Interesado en contratar mis servicios como regente? Estoy disponible para consultas y cotizaciones en todo el país.</p>
+      <p><strong>Email:</strong> <a href="mailto:kevinjmm834@gmail.com">kevinjmm834@gmail.com</a></p>
+      <p><strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/50672626963" target="_blank" rel="noopener">+506 7262-6963</a></p>
+      <a class="btn" href="https://wa.me/50672626963" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+    </section>
+
+    <section class="contact-form" aria-label="Formulario de contacto">
+      <h2>Formulario de Contacto</h2>
+      <form action="mailto:kevinjmm834@gmail.com" method="post" enctype="text/plain" novalidate>
+        <label for="name">Nombre completo:</label>
+        <input type="text" id="name" name="Nombre" required aria-required="true" />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="Correo" required aria-required="true" />
+
+        <label for="phone">Teléfono:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="Teléfono"
+          pattern="[0-9\s\-\+]+"
+          placeholder="+506 1234-5678"
+          aria-describedby="phoneHelp"
+        />
+        <small id="phoneHelp" class="privacy-notice">Solo números, espacios, + o -</small>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="Mensaje" rows="5" required aria-required="true"></textarea>
+
+        <p class="privacy-notice">Al enviar este formulario aceptas que tus datos serán usados únicamente para contactarte y responder a tu consulta.</p>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Regencia Química Externa | Todos los derechos reservados.
+  </footer>
+
+  <!-- Botón fijo para contacto WhatsApp -->
+  <a href="https://wa.me/50672626963" class="sticky-contact" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    WhatsApp
+  </a>
+</body>
+</html>
