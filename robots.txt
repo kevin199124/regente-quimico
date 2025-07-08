@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://kevin199124.github.io/regente-quimico/sitemap.xml
